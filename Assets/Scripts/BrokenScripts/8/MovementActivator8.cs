@@ -18,12 +18,15 @@ public class MovementActivator8 : MonoBehaviour
         
     }
 
-    private void onTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
+    // Capitalized "o" in "onTriggerEnter"
     {
         objectToActivate.GetComponent<MoveObject8>().enabled = true;
         otherObjectToActivate.GetComponent<MoveObject8>().enabled = true;
     }
-    private void pnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider other)
+    // Capitalized "o" in "onTriggerExit"
+
     {
         objectToActivate.GetComponent<MoveObject8>().enabled = true;
         otherObjectToActivate.GetComponent<MoveObject8>().enabled = true;

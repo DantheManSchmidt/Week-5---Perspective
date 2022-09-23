@@ -5,8 +5,8 @@ using UnityEngine;
 public class MovementActivator9 : MonoBehaviour
 {
     [SerializeField] GameObject objectToActivate;
-    GameObject otherObjectToActivate;
-
+    [SerializeField] GameObject otherObjectToActivate;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -18,12 +18,15 @@ public class MovementActivator9 : MonoBehaviour
         
     }
 
-    private void onTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
+    // Capitalized "o" in "onTriggerEnter"
     {
         objectToActivate.GetComponent<MoveObject9>().enabled = true;
         otherObjectToActivate.GetComponent<MoveObject9>().enabled = true;
     }
-    private void pnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider other)
+    // Capitalized "o" in "onTriggerExit"
+
     {
         objectToActivate.GetComponent<MoveObject9>().enabled = true;
         otherObjectToActivate.GetComponent<MoveObject9>().enabled = true;

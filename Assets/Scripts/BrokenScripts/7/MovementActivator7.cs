@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovementActivator7 : MonoBehaviour
 {
-    [SerializeField] GameObject objectToActivate;
+    [SerializeField] GameObject objectToActivate; 
     [SerializeField] GameObject otherObjectToActivate;
 
     // Start is called before the first frame update
@@ -18,12 +18,14 @@ public class MovementActivator7 : MonoBehaviour
         
     }
 
-    private void onTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
+        // Capitalized "o" in "onTriggerEnter"
     {
         objectToActivate.GetComponent<MoveObject7>().enabled = true;
         otherObjectToActivate.GetComponent<MoveObject7>().enabled = true;
     }
-    private void pnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider other)
+        // Capitalized "o" in "onTriggerExit"
     {
         objectToActivate.GetComponent<MoveObject7>().enabled = true;
         otherObjectToActivate.GetComponent<MoveObject7>().enabled = true;
